@@ -96,7 +96,7 @@ interface GigabitEthernet0/1
   Steps:
   1. Class-map <name-of-class-map>
   2. Class inspection_default -> this is a built-in object that includes common protocols such as DNS, FTP, HTTP, ICMP, and TFTP
-  3. Inspect <protocol-name>
+  3. Inspect protocol-name
 
 **Troubleshooting Tools:**
 
