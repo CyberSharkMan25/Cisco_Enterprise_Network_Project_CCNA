@@ -37,6 +37,11 @@ To elevate the lab beyond basic academic routing and switching, the environment 
 ### 2. Layer 2 & Layer 3 Switching Architecture
 * **Access vs. Distribution Layers:** Utilized Layer 2 switches at the access tier for endpoint connectivity and Layer 3 switches at the core/distribution tier for high-speed inter-VLAN routing via Switched Virtual Interfaces (SVIs).
 * **Trunking Best Practices:** 802.1Q trunk links are configured strictly between switch-to-switch and switch-to-router connections, passing tagged traffic only for permitted VLANs.
+  **Trunk Connections**:
+  | Connected Devices | IP Range | VLANS Included | IP Subnet Range | 
+  | :--- | :--- | :--- | :--- | 
+  | **Management** | VLAN 10 | `10.10.10.0/24` | `10.10.10.1` | Network infrastructure management |
+  
 * **Access Port Hardening:** Endpoint interfaces (PC, Servers, IP Phones) are locked to access mode, isolating voice traffic on dedicated Voice VLANs alongside data VLANs.
 
 ```text
@@ -46,25 +51,14 @@ interface FastEthernet0/1
  switchport access vlan 50
  switchport voice vlan 20
  spanning-tree portfast
-
-
-![Network Topology or Configuration Screenshot](./Screenshot%202026-10-16%20013805.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 !
 interface GigabitEthernet0/1
  switchport mode trunk
  switchport trunk allowed vlan 10,20,30,40,50
+```
+
+### 3. Routing Architecture
+* **Routing Protocols:** The primary routing protocol is OSPF (Open Shortest Path First) and backup static routes if OSPF adjacency failture occurs.  
+| Department / Zone | VLAN ID | IP Subnet Range | Gateway Address | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **Management** | VLAN 10 | `10.10.10.0/24` | `10.10.10.1` | Network infrastructure management |
