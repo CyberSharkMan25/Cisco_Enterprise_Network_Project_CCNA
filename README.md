@@ -48,7 +48,7 @@ interface FastEthernet0/1
  spanning-tree portfast
 
 
-
+![Network Topology or Configuration Screenshot](./Screenshot%202026-10-16%20013805.png)
 
 
 
