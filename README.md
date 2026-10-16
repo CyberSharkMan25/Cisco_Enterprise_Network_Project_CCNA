@@ -29,7 +29,7 @@ To elevate the lab beyond basic academic routing and switching, the environment 
 | **Information Technology** | VLAN 20 | `10.10.10.0/25` | `10.10.10.1` | Corporate IT department desktop endpoints |
 | **Legal** | VLAN 112 | `10.10.12.0/28` | `10.10.12.2` | Corporate legal department desktop endpoints |
 | **Voice / VoIP** | VLAN 20 | `192.168.40.0/24` | `192.168.40.1` | IP Telephony infrastructure |
-| **DMZ / Servers** | VLAN 100 | `10.10.14.0/24` | `10.10.14.255` | Internal DNS, DHCP, and Web services |
+| **Servers** | VLAN 100 | `10.10.14.0/24` | `10.10.14.255` | Internal DNS, DHCP, and Web services |
 
 ---
 
