@@ -20,7 +20,6 @@ To elevate the lab beyond basic academic routing and switching, the environment 
 
 | Department / Zone | VLAN ID | IP Subnet Range | Gateway Address | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **Management** | VLAN 10 | `10.10.10.0/24` | `10.10.10.1` | Network infrastructure management |
 | **Sales** | VLAN 50 | `10.10.10.129/29` | `10.10.10.130` | Corporate sales department desktop endpoints |
 | **Customer Service** | VLAN 59 | `10.10.11.0/29` | `10.10.11.1` | Corporate desktop endpoints |
 | **Product Development** | VLAN 58 | `10.10.15.0/29` | `10.10.15.2` | Corporate product development department desktop endpoints |
@@ -37,15 +36,13 @@ To elevate the lab beyond basic academic routing and switching, the environment 
 ### 2. Layer 2 & Layer 3 Switching Architecture
 * **Access vs. Distribution Layers:** Utilized Layer 2 switches at the access tier for endpoint connectivity and Layer 3 switches at the core/distribution tier for high-speed inter-VLAN routing via Switched Virtual Interfaces (SVIs).
 * **Trunking Best Practices:** 802.1Q trunk links are configured strictly between switch-to-switch and switch-to-router connections, passing tagged traffic only for permitted VLANs.
+* **Native VLAN:** **415** is the native VLAN for the network.
 * **Trunk Connections:**:
-  | Connected Devices | IP Range | VLANS Included | 
-  | :--- | :--- | :--- |
-  | **Switch-Washington-D.C.-1 & Multilayer-Switch-Washington-D.C.-1** | `10.10.17.0/30` | 550,55,58,59 |
+  | Connected Devices | VLANS Included | 
+  | :--- | :--- | 
+  | **Switch-Washington-D.C.-1 & Multilayer-Switch-Washington-D.C.-1** | 50,55,58,59 |
+  | **Switch-Washington-D.C.-2 & Multilayer-Switch-Washington-D.C.-2** | 10,20,25,30,40,112 |
 
-  | Department / Zone | VLAN ID | IP Subnet Range | Gateway Address | Description |
-| :--- | :--- | :--- | :--- | :--- |
----
-  
 * **Access Port Hardening:** Endpoint interfaces (PC, Servers, IP Phones) are locked to access mode, isolating voice traffic on dedicated Voice VLANs alongside data VLANs.
 
 ```text
@@ -66,3 +63,10 @@ interface GigabitEthernet0/1
 | Department / Zone | VLAN ID | IP Subnet Range | Gateway Address | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | **Management** | VLAN 10 | `10.10.10.0/24` | `10.10.10.1` | Network infrastructure management |
+
+### 4. Port Security
+
+
+### 5. ASA-5506X Firewall Configuration
+
+
