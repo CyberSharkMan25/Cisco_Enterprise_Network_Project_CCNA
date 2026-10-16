@@ -2,7 +2,6 @@
 ![Cisco](https://img.shields.io/badge/Cisco-Packet%20Tracer-blue?logo=cisco)
 ![CCNA](https://img.shields.io/badge/Certification-CCNA%20Topics-005073)
 ![Firewall](https://img.shields.io/badge/Security-Cisco%20ASA%20%2F%20MPF-red)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ## Executive Summary
 The primary objective of this project was to synthesize core routing, switching, and security principles mastered during **Cisco Certified Network Associate (CCNA)** preparation into an enterprise-grade simulation environment. Built within Cisco Packet Tracer, the topology incorporates multi-layer switching, dynamic routing protocols, VLAN segmentation, and automated network service provisioning.
