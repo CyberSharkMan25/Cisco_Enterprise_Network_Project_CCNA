@@ -74,9 +74,6 @@ Vlan100                10.10.14.1
 Vlan112                10.10.12.1      
 
 
-
-
-
 ### 3. Routing Architecture
 * **Internal Network:**
 * **Routing Protocols:** The primary routing protocol is OSPF (Open Shortest Path First) and backup static routes if OSPF adjacency failture occurs.  
