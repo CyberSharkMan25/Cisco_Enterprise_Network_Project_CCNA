@@ -37,7 +37,7 @@ To elevate the lab beyond basic academic routing and switching, the environment 
 ### 2. Layer 2 & Layer 3 Switching Architecture
 * **Access vs. Distribution Layers:** Utilized Layer 2 switches at the access tier for endpoint connectivity and Layer 3 switches at the core/distribution tier for high-speed inter-VLAN routing via Switched Virtual Interfaces (SVIs).
 * **Trunking Best Practices:** 802.1Q trunk links are configured strictly between switch-to-switch and switch-to-router connections, passing tagged traffic only for permitted VLANs.
-  **Trunk Connections**:
+* **Trunk Connections:**:
   | Connected Devices | IP Range | VLANS Included | 
   | :--- | :--- | :--- |
   | ** Switch-Washington-D.C.-1 & Multilayer-Switch-Washington-D.C.-1 ** | `10.10.17.0/30` | 550,55,58,59 |
