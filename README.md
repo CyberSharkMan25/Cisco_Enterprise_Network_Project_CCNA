@@ -60,6 +60,23 @@ interface GigabitEthernet0/1
  switchport mode trunk
  switchport trunk allowed vlan 10,20,30,40,50
 ```
+Layer 3 SVIs for Multilayer Switch Washington D.C.-1
+Vlan25                 10.10.10.1      
+Vlan30                 10.10.10.66     
+Vlan40                 10.10.20.1      
+Vlan100                10.10.14.1      
+Vlan112                10.10.12.1      
+
+Layer 3 SVIs on Multilayer Switch Washington D.C.-2
+Vlan25                 10.10.10.1      
+Vlan30                 10.10.10.66    
+Vlan40                 10.10.20.1      
+Vlan100                10.10.14.1      
+Vlan112                10.10.12.1      
+
+
+
+
 
 ### 3. Routing Architecture
 * **Routing Protocols:** The primary routing protocol is OSPF (Open Shortest Path First) and backup static routes if OSPF adjacency failture occurs.  
