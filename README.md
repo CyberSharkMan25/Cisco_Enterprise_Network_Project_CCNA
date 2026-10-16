@@ -21,14 +21,14 @@ To elevate the lab beyond basic academic routing and switching, the environment 
 | Department / Zone | VLAN ID | IP Subnet Range | Gateway Address | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | **Management** | VLAN 10 | `10.10.10.0/24` | `10.10.10.1` | Network infrastructure management |
-| **Sales** | VLAN 50 | `10.10.10.129` | `10.10.10.159` | Corporate sales department desktop endpoints |
-| **Customer Service** | VLAN 59 | `10.10.11.0/29` | `192.168.20.131` | Corporate desktop endpoints |
-| **Product Development** | VLAN 58 | `10.10.15.0/29` | `10.10.15.31` | Corporate product development department desktop endpoints |
-| **Marketing** | VLAN 20 | `10.10.10.161/29` | `10.10.10.191` | Corporate marketing department desktop endpoints |
-| **Human Resources** | VLAN 30 | `10.10.10.66` | `192.168.20.1` | Corporate human resource department desktop endpoints |
-| **Finance** | VLAN 40 | `10.10.20.0/29` | `10.10.20.31` | Corporate Finance department desktop endpoints |
-| **Information Technology** | VLAN 20 | `10.10.10.0/25` | `10.10.10.63` | Corporate IT department desktop endpoints |
-| **Legal** | VLAN 112 | `10.10.12.0/28` | `10.10.12.15` | Corporate legal department desktop endpoints |
+| **Sales** | VLAN 50 | `10.10.10.129/29` | `10.10.10.130` | Corporate sales department desktop endpoints |
+| **Customer Service** | VLAN 59 | `10.10.11.0/29` | `10.10.11.1` | Corporate desktop endpoints |
+| **Product Development** | VLAN 58 | `10.10.15.0/29` | `10.10.15.2` | Corporate product development department desktop endpoints |
+| **Marketing** | VLAN 20 | `10.10.10.161/29` | `10.10.10.162` | Corporate marketing department desktop endpoints |
+| **Human Resources** | VLAN 30 | `10.10.10.66/29` | `10.10.10.67` | Corporate human resource department desktop endpoints |
+| **Finance** | VLAN 40 | `10.10.20.0/29` | `10.10.20.2` | Corporate Finance department desktop endpoints |
+| **Information Technology** | VLAN 20 | `10.10.10.0/25` | `10.10.10.1` | Corporate IT department desktop endpoints |
+| **Legal** | VLAN 112 | `10.10.12.0/28` | `10.10.12.2` | Corporate legal department desktop endpoints |
 | **Voice / VoIP** | VLAN 20 | `192.168.40.0/24` | `192.168.40.1` | IP Telephony infrastructure |
 | **DMZ / Servers** | VLAN 100 | `10.10.14.0/24` | `10.10.14.255` | Internal DNS, DHCP, and Web services |
 
@@ -43,8 +43,8 @@ To elevate the lab beyond basic academic routing and switching, the environment 
 ! Sample Access Switch Trunk & Access Config
 interface FastEthernet0/1
  switchport mode access
- switchport access vlan 20
- switchport voice vlan 40
+ switchport access vlan 50
+ switchport voice vlan 20
  spanning-tree portfast
 !
 interface GigabitEthernet0/1
