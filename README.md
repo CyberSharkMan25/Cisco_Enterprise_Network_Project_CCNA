@@ -60,9 +60,13 @@ interface GigabitEthernet0/1
 
 ### 3. Routing Architecture
 * **Routing Protocols:** The primary routing protocol is OSPF (Open Shortest Path First) and backup static routes if OSPF adjacency failture occurs.  
-| Department / Zone | VLAN ID | IP Subnet Range | Gateway Address | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| **Management** | VLAN 10 | `10.10.10.0/24` | `10.10.10.1` | Network infrastructure management |
+* **Routing Scheme:**:
+  | Connected Devices | IP Subnet | 
+  | :--- | :--- | 
+  | **Multilayer-Switch-Washington-D.C.-1 & Router-Washington-D.C.-1** | 192.168.0.8/30 |
+  | **Router-Washington-D.C.-1 & ASA Firewall (Interface G1/1)** | 192.168.0.20/30 |
+  | **Router-Washington-D.C.-2 & ASA Firewall (Interface G1/2)** | 192.168.0.24/30 |
+  | **Multilayer-Switch-Washington-D.C. & Router-Washington-D.C.-2** | 192.168.0.0/30 |
 
 ### 4. Port Security
 
