@@ -85,7 +85,7 @@ Vlan112                10.10.12.1
   | **Multilayer-Switch-Washington-D.C. & Router-Washington-D.C.-2** | 192.168.0.0/30 |
   
 * **External Network:**
-* There are two external ISP routers (Verizon, Comcast) 
+* There are two external ISP routers (Verizon (24.0.0.0/30, Comcast (23.24.0.0/30) 
 
 ### 4. ASA-5506X Firewall Configuration
 * **Network Interfaces:** Both internal interfaces "INTERNAL-1" and "INTERNAL-2", while the external interfaces "EXTERNAL-Verizon" "EXTERNAL-Comcast"
