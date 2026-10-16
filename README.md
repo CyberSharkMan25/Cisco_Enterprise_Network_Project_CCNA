@@ -49,9 +49,12 @@ To elevate the lab beyond basic academic routing and switching, the environment 
 ! Sample Access Switch Trunk & Access Config
 interface FastEthernet0/1
  switchport mode access
- switchport access vlan 50
- switchport voice vlan 20
+ switchport access vlan 50 # assign the custom, non-voice vlan
+ switchport voice vlan 20 # assign the voice vlan
  spanning-tree portfast
+ switchport port-security violation shutdown # if any other mac address attempts to connect to the port, then the port is shut down and triggering a log alert. This is the most extreme option for port security.
+ switchport port-security mac-address sticky # sticky mac dynamically learns MAC addresses and adds them to running-configuration to ensure the same port and MAC address relationships are persistent if the switch reboots.
+
 !
 interface GigabitEthernet0/1
  switchport mode trunk
@@ -68,9 +71,38 @@ interface GigabitEthernet0/1
   | **Router-Washington-D.C.-2 & ASA Firewall (Interface G1/2)** | 192.168.0.24/30 |
   | **Multilayer-Switch-Washington-D.C. & Router-Washington-D.C.-2** | 192.168.0.0/30 |
 
-### 4. Port Security
+### 4. ASA-5506X Firewall Configuration
+* **Network Interfaces:** Both internal interfaces "INTERNAL-1" and "INTERNAL-2", while the external interfaces "EXTERNAL-Verizon" "EXTERNAL-Comcast"
+* **Network Objects & PAT Configuration:**
+1. object network INSIDE-RANGE-1
+   subnet 10.10.0.0 255.255.224.0
+   nat (INTERNAL-1,EXTERNAL-VERIZON) dynamic interface
+2. object network INSIDE-RANGE-2
+   subnet 10.10.0.0 255.255.224.0
+   nat (INTERNAL-2,EXTERNAL-VERIZON) dynamic interface
+3. object network INSIDE-RANGE-3
+   subnet 10.10.0.0 255.255.224.0
+   nat (INTERNAL-1,EXTERNAL-COMCAST) dynamic interface
+4. object network INSIDE-RANGE-4
+   subnet 10.10.0.0 255.255.224.0
+   nat (INTERNAL-2,EXTERNAL-COMCAST) dynamic interface
+* **Access Lists:**
+1. access-list EXTERNAL_TO_INTERNAL extended permit icmp any any echo-reply #allows for ICMP replies from blocking external to internal ASA-5506X firewall
+2. access-list EXTERNAL_TO_INTERNAL extended permit icmp any any unreachable #prevents any ICMP replies from blocking external to internal interfaces on ASA-5506X firewalls 
+3. access-list INTERNAL-INTERNAL extended permit icmp any any echo-reply
+4. access-list INTERNAL-INTERNAL extended permit icmp any any unreachable
+* **Routing Protocols:** Both OSPF and static routes are used to managed internal and external traffic.
+* **Modular Policy Framework (MPF):** Allows for filtering by protocols on the router.
+  Steps:
+  1. Class-map <name-of-class-map>
+  2. Class inspection_default -> this is a built-in object that includes common protocols such as DNS, FTP, HTTP, ICMP, and TFTP
+  3. Inspect <protocol-name>
 
+**Troubleshooting Tools:**
 
-### 5. ASA-5506X Firewall Configuration
+Cisco Documentation: Cisco’s documentation can be very difficult to read and can sometimes feel overwhelming. Nevertheless, it is always good practice to get good at reading difficult documentation and translating it into language understandable to your learning style.
+
+AI Models: I primarily used Google Gemini as I found its research and explanations extremely helpful compared to OpenAI or Claude. Copilot was a very close second, but often provided incorrect commands that didn’t apply to packet tracer.
+
 
 
