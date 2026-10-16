@@ -79,6 +79,7 @@ Vlan112                10.10.12.1
 
 
 ### 3. Routing Architecture
+* **Internal Network:**
 * **Routing Protocols:** The primary routing protocol is OSPF (Open Shortest Path First) and backup static routes if OSPF adjacency failture occurs.  
 * **Routing Scheme:**:
   | Connected Devices | IP Subnet | 
@@ -87,6 +88,9 @@ Vlan112                10.10.12.1
   | **Router-Washington-D.C.-1 & ASA Firewall (Interface G1/1)** | 192.168.0.20/30 |
   | **Router-Washington-D.C.-2 & ASA Firewall (Interface G1/2)** | 192.168.0.24/30 |
   | **Multilayer-Switch-Washington-D.C. & Router-Washington-D.C.-2** | 192.168.0.0/30 |
+  
+* **External Network:**
+* There are two external ISP routers (Verizon, Comcast) 
 
 ### 4. ASA-5506X Firewall Configuration
 * **Network Interfaces:** Both internal interfaces "INTERNAL-1" and "INTERNAL-2", while the external interfaces "EXTERNAL-Verizon" "EXTERNAL-Comcast"
