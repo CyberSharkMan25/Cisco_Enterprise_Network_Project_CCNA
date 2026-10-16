@@ -15,15 +15,22 @@ To elevate the lab beyond basic academic routing and switching, the environment 
 
 ### 1. Subnetting & Addressing Strategy
 * **Design Philosophy:** Subnetting was designed with modular growth in mind, utilizing Variable Length Subnet Masking (VLSM) to accommodate future department expansion without wasting address space.
+* **Default Gateways:** All default gateways were set as the first usable IP address in the subnet.
 * **Subnet Allocation Table:**
 
 | Department / Zone | VLAN ID | IP Subnet Range | Gateway Address | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | **Management** | VLAN 10 | `10.10.10.0/24` | `10.10.10.1` | Network infrastructure management |
-| **Sales / Users** | VLAN 20 | `192.168.20.0/24` | `192.168.20.1` | Corporate desktop endpoints |
-| **Engineering** | VLAN 30 | `192.168.30.0/24` | `192.168.30.1` | High-bandwidth workstations |
-| **Voice / VoIP** | VLAN 40 | `192.168.40.0/24` | `192.168.40.1` | IP Telephony infrastructure |
-| **DMZ / Servers** | VLAN 50 | `172.16.50.0/24` | `172.16.50.1` | Internal DNS, DHCP, and Web services |
+| **Sales** | VLAN 50 | `10.10.10.129` | `10.10.10.159` | Corporate sales department desktop endpoints |
+| **Customer Service** | VLAN 59 | `10.10.11.0/29` | `192.168.20.131` | Corporate desktop endpoints |
+| **Product Development** | VLAN 58 | `10.10.15.0/29` | `10.10.15.31` | Corporate product development department desktop endpoints |
+| **Marketing** | VLAN 20 | `10.10.10.161/29` | `10.10.10.191` | Corporate marketing department desktop endpoints |
+| **Human Resources** | VLAN 30 | `10.10.10.66` | `192.168.20.1` | Corporate human resource department desktop endpoints |
+| **Finance** | VLAN 40 | `10.10.20.0/29` | `10.10.20.31` | Corporate Finance department desktop endpoints |
+| **Information Technology** | VLAN 20 | `10.10.10.0/25` | `10.10.10.63` | Corporate IT department desktop endpoints |
+| **Legal** | VLAN 112 | `10.10.12.0/28` | `10.10.12.15` | Corporate legal department desktop endpoints |
+| **Voice / VoIP** | VLAN 20 | `192.168.40.0/24` | `192.168.40.1` | IP Telephony infrastructure |
+| **DMZ / Servers** | VLAN 100 | `10.10.14.0/24` | `10.10.14.255` | Internal DNS, DHCP, and Web services |
 
 ---
 
