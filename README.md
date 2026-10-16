@@ -39,7 +39,7 @@ To elevate the lab beyond basic academic routing and switching, the environment 
 * **Trunking Best Practices:** 802.1Q trunk links are configured strictly between switch-to-switch and switch-to-router connections, passing tagged traffic only for permitted VLANs.
   **Trunk Connections**:
   | Connected Devices | IP Range | VLANS Included | 
-  | :--- | :--- | :--- | :--- | 
+  | :--- | :--- | :--- |
   | ** Switch-Washington-D.C.-1 & Multilayer-Switch-Washington-D.C.-1 ** | `10.10.17.0/30` | 550,55,58,59 |
   
 * **Access Port Hardening:** Endpoint interfaces (PC, Servers, IP Phones) are locked to access mode, isolating voice traffic on dedicated Voice VLANs alongside data VLANs.
