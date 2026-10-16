@@ -46,6 +46,27 @@ interface FastEthernet0/1
  switchport access vlan 50
  switchport voice vlan 20
  spanning-tree portfast
+
+<img width="628" height="561" alt="image" src="https://github.com/user-attachments/assets/6941b62d-3749-468c-a1fa-458deba34d4b" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 !
 interface GigabitEthernet0/1
  switchport mode trunk
