@@ -59,10 +59,10 @@ interface GigabitEthernet0/1
  switchport mode trunk
  switchport trunk allowed vlan 10,20,30,40,50
 ```
-Layer 3 SVIs for Multilayer Switch Washington D.C.-1
+**Layer 3 SVIs for Multilayer Switch Washington D.C.-1:**
 | :--- | :--- | 
-| Vlan25 |         10.10.10.1 |      
-| Vlan30 |         10.10.10.66|     
+| Vlan25 | 10.10.10.1 |      
+| Vlan30 | 10.10.10.66|     
 Vlan40                 10.10.20.1      
 Vlan100                10.10.14.1      
 Vlan112                10.10.12.1      
