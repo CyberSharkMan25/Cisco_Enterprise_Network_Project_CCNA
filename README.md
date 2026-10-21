@@ -62,18 +62,17 @@ interface GigabitEthernet0/1
 *| **Layer 3 SVIs for Multilayer Switch Washington D.C.-1:**|
 | :--- | :--- | 
 | **Vlan25** | 10.10.10.1 |      
-| Vlan30 | 10.10.10.66|     
-
-Vlan40                 10.10.20.1      
-Vlan100                10.10.14.1      
-Vlan112                10.10.12.1      
+| Vlan30 | 10.10.10.66 |     
+| Vlan40 | 10.10.20.1 |      
+| Vlan100 | 10.10.14.1 |      
+| Vlan112 | 10.10.12.1 |     
 
 Layer 3 SVIs on Multilayer Switch Washington D.C.-2
-Vlan25                 10.10.10.1      
-Vlan30                 10.10.10.66    
-Vlan40                 10.10.20.1      
-Vlan100                10.10.14.1      
-Vlan112                10.10.12.1      
+| :--- | :--- |
+| Vlan50 | 10.10.10.129 |    
+| Vlan55 | 10.10.10.161 | 
+| Vlan58 | 10.10.15.1 |     
+| Vlan59 | 10.10.11.1 |
 
 
 ### 3. Routing Architecture
