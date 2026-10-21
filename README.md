@@ -54,6 +54,7 @@ interface FastEthernet0/1
  switchport port-security violation shutdown # if any other mac address attempts to connect to the port, then the port is shut down and triggering a log alert. This is the most extreme option for port security.
  switchport port-security mac-address sticky # sticky mac dynamically learns MAC addresses and adds them to running-configuration to ensure the same port and MAC address relationships are persistent if the switch reboots.
 
+Example:
 !
 interface GigabitEthernet0/1
  switchport mode trunk
@@ -66,8 +67,8 @@ interface GigabitEthernet0/1
 | Vlan40 | 10.10.20.1 |      
 | Vlan100 | 10.10.14.1 |      
 | Vlan112 | 10.10.12.1 |     
-```
-* | **Layer 3 SVIs on Multilayer Switch Washington D.C.-2:**|
+
+*| **Layer 3 SVIs on Multilayer Switch Washington D.C.-2:**|
 | :--- | :--- |
 | Vlan50 | 10.10.10.129 |    
 | Vlan55 | 10.10.10.161 | 
