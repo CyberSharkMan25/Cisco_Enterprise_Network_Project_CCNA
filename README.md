@@ -67,7 +67,7 @@ interface GigabitEthernet0/1
 | Vlan100 | 10.10.14.1 |      
 | Vlan112 | 10.10.12.1 |     
 
-Layer 3 SVIs on Multilayer Switch Washington D.C.-2
+* | **Layer 3 SVIs on Multilayer Switch Washington D.C.-2:**|
 | :--- | :--- |
 | Vlan50 | 10.10.10.129 |    
 | Vlan55 | 10.10.10.161 | 
